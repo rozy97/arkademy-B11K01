@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Biodata Saya</title>
+    <style>
+        p, header {
+            width: 80%;
+            margin: auto;
+        }
+        h1 {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Return Biodata Dalam Format JSON</h1>
+    </header>
+    <div id="bio"></div>
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        let bio = document.getElementById("bio");
+        let firmansyahRozy
+        const biodata =  function(name, age, address, hobbies = [], is_married, list_school = [], skills = [], interest_in_coding) {
+            this.name = name;
+            this.age = age;
+            this.address = address;
+            this.hobbies = hobbies;
+            this.is_married = is_married;
+            this.list_school = list_school;
+            this.skills = skills;
+            this.interest_in_coding = interest_in_coding;
+        }
+        
+
+        firmansyahRozy = new biodata(
+            "Firmansyah Rozy",
+            22,
+            "Jl. Bunga Cempaka no. 31 kec. Medan Selayang, Kota Medan, Sumatera Utara",
+            ["Music", "Coding", "European Football", "Reading Novel"],
+            false,
+            [{ name: "SMA CT Foundation Medan", year_in: 2011, year_out: 2014, major: "IPA"}],
+            [
+                { skill_name: "HyperText Markup Language", level: "advanced" },
+                { skill_name: "Cascading StyleSheet", level: "advanced" },
+                { skill_name: "Modern Javascript (ES6+)", level: "advanced" },
+                { skill_name: "Computer Science Concept", level: "advanced"},
+            ],
+            true
+        )
+        
+        
+        bio.innerHTML = `<p>${JSON.stringify(firmansyahRozy)}</p>`;
+    </script>
+    
+</body>
+</html>
