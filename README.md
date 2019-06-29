@@ -23,7 +23,8 @@
 
   
 
-  ![](7/screenshot/1.png)
+  ![](7/screenshoot/1.png)
+  ![](7/screenshoot/2.png)
   
 ---
 
